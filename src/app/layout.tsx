@@ -2,6 +2,7 @@ import './globals.css'
 
 import type { Metadata } from 'next'
 import { Poppins } from 'next/font/google'
+import { Toaster } from 'sonner'
 
 export const metadata: Metadata = {
   title: {
@@ -26,6 +27,7 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <body className={`${poppins.variable} scroll-smooth antialiased`}>
+        <Toaster />
         {children}
       </body>
     </html>

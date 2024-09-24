@@ -40,7 +40,7 @@ export function MenuPlayer() {
           <circle
             className="text-[#0C323D]"
             stroke="currentColor"
-            stroke-width="2"
+            strokeWidth="2"
             fill="transparent"
             strokeDasharray="100"
             // stroke-dashoffset="20"  -> barra de progresso

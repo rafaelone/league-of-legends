@@ -2,3 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+/* :where([data-sonner-toast]) :where([data-icon]) {
+  width: auto;
+} */
+ div[data-icon]{
+  width: auto
+ }

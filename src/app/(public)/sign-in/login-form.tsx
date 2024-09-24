@@ -85,7 +85,7 @@ export function LoginForm() {
         </strong>
 
         <Link
-          href="/"
+          href="/sign-up"
           className="w-full px-4 text-center font-poppins text-md font-bold text-white-100 text-shadow-sign-in hover:underline"
         >
           Criar Conta
