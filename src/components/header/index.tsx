@@ -17,12 +17,12 @@ export function Header() {
         <div className="z-10 flex flex-1 items-center justify-between">
           <nav className="flex items-center">
             <ul className="flex gap-8">
-              <li className="h-full cursor-pointer font-poppins text-md font-bold uppercase text-yellow-500 transition-all hover:text-yellow-300 hover:brightness-105 hover:brightness-150">
+              <li className="font-league h-full cursor-pointer text-md font-bold uppercase text-yellow-500 transition-all hover:text-yellow-300 hover:brightness-105 hover:brightness-150">
                 <Link href="/" prefetch>
                   Início
                 </Link>
               </li>
-              <li className="h-full cursor-pointer font-poppins text-md font-bold uppercase text-yellow-500 transition-all hover:text-yellow-300 hover:brightness-150">
+              <li className="font-league h-full cursor-pointer text-md font-bold uppercase text-yellow-500 transition-all hover:text-yellow-300 hover:brightness-150">
                 <Link href="tft" prefetch>
                   TFT
                 </Link>
@@ -30,7 +30,7 @@ export function Header() {
             </ul>
           </nav>
           <div className="relative flex h-full items-center gap-6">
-            <button className="h-full cursor-pointer font-poppins text-md font-bold uppercase transition-all hover:brightness-150">
+            <button className="font-league h-full cursor-pointer text-md font-bold uppercase transition-all hover:brightness-150">
               <Image
                 src={CollectionIcon}
                 alt="Collection"
@@ -39,7 +39,7 @@ export function Header() {
               />
             </button>
             <div className="h-[40px] w-[2px] bg-gradient-to-b from-dark-100 from-[10%] via-yellow-500 to-dark-100" />
-            <button className="h-full cursor-pointer font-poppins text-md font-bold uppercase transition-all hover:brightness-150">
+            <button className="font-league h-full cursor-pointer text-md font-bold uppercase transition-all hover:brightness-150">
               <Image
                 src={CraftIcon}
                 alt="Craft"
@@ -47,7 +47,7 @@ export function Header() {
                 quality={80}
               />
             </button>
-            <button className="h-full cursor-pointer font-poppins text-md font-bold uppercase transition-all hover:brightness-150">
+            <button className="font-league h-full cursor-pointer text-md font-bold uppercase transition-all hover:brightness-150">
               <Image
                 src={StoreIcon}
                 alt="Store"
@@ -68,7 +68,7 @@ export function Header() {
                   height={20}
                   width={20}
                 />
-                <strong className="font-poppins text-sm font-bold text-white-100">
+                <strong className="font-league text-sm font-bold text-white-100">
                   4230
                 </strong>
               </button>
@@ -83,7 +83,7 @@ export function Header() {
                   height={20}
                   width={20}
                 />
-                <strong className="font-poppins text-sm font-bold text-white-100">
+                <strong className="font-league text-sm font-bold text-white-100">
                   100 Mil
                 </strong>
               </button>

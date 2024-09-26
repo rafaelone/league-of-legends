@@ -5,7 +5,7 @@ import { FaCircle } from 'react-icons/fa'
 import { tv } from 'tailwind-variants'
 
 const StatusVariants = tv({
-  base: 'flex items-center gap-2 font-poppins text-sm font-medium transition-colors',
+  base: 'flex items-center gap-2 font-league text-sm font-medium transition-colors',
   variants: {
     variant: {
       online: 'text-green-300',

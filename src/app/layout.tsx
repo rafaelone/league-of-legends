@@ -2,6 +2,8 @@ import './globals.css'
 
 import type { Metadata } from 'next'
 import { Poppins } from 'next/font/google'
+import localFont from 'next/font/local'
+import path from 'path'
 import { Toaster } from 'sonner'
 
 export const metadata: Metadata = {
@@ -12,11 +14,16 @@ export const metadata: Metadata = {
   description: 'League of Legends',
 }
 
-const poppins = Poppins({
-  subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
+const league = localFont({
+  src: [
+    {
+      path: '../assets/fonts/FrizQuadrata.ttf',
+      weight: '400',
+      style: 'normal',
+    },
+  ],
 
-  variable: '--font-poppins',
+  variable: '--font-league',
 })
 
 export default function RootLayout({
@@ -26,7 +33,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-br">
-      <body className={`${poppins.variable} scroll-smooth antialiased`}>
+      <body className={`${league.variable} scroll-smooth antialiased`}>
         <Toaster />
         {children}
       </body>

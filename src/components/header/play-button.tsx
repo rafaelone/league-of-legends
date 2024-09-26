@@ -26,7 +26,7 @@ export function PlayButton() {
         <Image src={PlayerButton} alt="player" />
 
         <div className="absolute left-[50px] flex h-full w-[141px] items-center justify-center">
-          <span className="font-poppins font-bold text-white-100">Play</span>
+          <span className="font-league font-bold text-white-100">Play</span>
         </div>
       </button>
     </>

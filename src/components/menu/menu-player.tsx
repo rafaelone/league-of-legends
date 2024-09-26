@@ -78,7 +78,7 @@ export function MenuPlayer() {
       </button>
 
       <div className="flex flex-col items-center justify-center">
-        <strong className="font-poppins text-md text-white-100">OhKiDó</strong>
+        <strong className="font-league text-md text-white-100">OhKiDó</strong>
         <MenuStatus />
       </div>
     </div>

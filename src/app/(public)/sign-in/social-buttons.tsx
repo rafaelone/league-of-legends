@@ -7,14 +7,14 @@ type SocialButtonProps = {
 }
 
 const SocialButtonVariants = tv({
-  base: 'flex h-8 flex-1 items-center justify-center rounded-lg bg-white-200 grayscale group hover:grayscale-0 transition-all duration-150 ',
+  base: 'flex h-8 flex-1 items-center justify-center rounded-lg   group  transition-all duration-150 ',
   variants: {
     variant: {
-      Facebook: 'hover:bg-blue-300',
-      Google: 'hover:bg-white-100',
-      Apple: 'hover:bg-dark-100',
-      Xbox: 'hover:bg-green-100',
-      PSN: 'hover:bg-blue-400',
+      Facebook: 'bg-[#1A78F2]',
+      Google: 'bg-white-100 border-[2px]',
+      Apple: 'bg-dark-100',
+      Xbox: 'bg-[#0F7C0F]',
+      PSN: 'bg-[#00449C]',
     },
   },
 })
@@ -24,19 +24,19 @@ export function SocialButton({ type }: SocialButtonProps) {
 
   switch (type) {
     case 'Facebook':
-      icon = <FaFacebook size={24} className="group-hover:text-white-100" />
+      icon = <FaFacebook size={24} className="text-white-100" />
       break
     case 'Google':
       icon = <FcGoogle size={24} />
       break
     case 'Apple':
-      icon = <FaApple size={24} className="group-hover:text-white-100" />
+      icon = <FaApple size={24} className="text-white-100" />
       break
     case 'Xbox':
-      icon = <FaXbox size={24} className="group-hover:text-white-100" />
+      icon = <FaXbox size={24} className="text-white-100" />
       break
     case 'PSN':
-      icon = <FaPlaystation size={24} className="group-hover:text-white-100" />
+      icon = <FaPlaystation size={24} className="text-white-100" />
       break
     default:
       icon = null

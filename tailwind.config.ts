@@ -32,31 +32,38 @@ const config = {
           200: '#fd0352',
           300: '#400A12',
         },
-        gray: {
-          100: '#D8D8D8',
-          500: '#65656f',
-        },
+
         white: {
           100: '#fff',
-          200: '#ededed',
-        },
-        yellow: {
-          300: '#f0e6d2',
-          500: '#C2B998',
-          600: '#999487',
-          700: '#c7984a',
+          200: '#F5F5F5',
         },
         blue: {
-          100: '#0acbe6',
-          300: '#177AF2',
-          400: '#00439A',
-          900: '#010A13',
+          100: '#CDFAFA',
+          200: '#0AC8B9',
+          300: '#0397AB',
+          400: '#005A82',
+          500: '#0A323C',
+          600: '#091428',
+          700: '#0A1428',
         },
-        green: {
-          100: '#47CC95',
-          200: '#117B0D',
-          300: '#248751',
+        gold: {
+          100: '#F0E6D2',
+          200: '#C8AA6E',
+          300: '#C8AA6E',
+          400: '#C89B3C',
+          500: '#785A28',
+          600: '#463714',
+          700: '#32281E',
         },
+        grey: {
+          100: '#A09B8C',
+          200: '#5B5A56',
+          300: '#3C3C41',
+          400: '#1E2328',
+          500: '#1E282D',
+          600: '#010A13',
+        },
+
         dark: {
           100: '#000000',
         },
@@ -67,6 +74,7 @@ const config = {
       },
       fontFamily: {
         poppins: 'var(--font-poppins)',
+        league: 'var(--font-league)',
       },
       borderRadius: {
         sm: '2px',
@@ -103,14 +111,7 @@ const config = {
         '3xl': '2rem', // 32px
         '4xl': '4rem', // 64px
       },
-      boxShadow: {
-        input:
-          '0 0 .2rem #fff,0 0 .2rem #fff,0 0 2rem #fd0352,0 0 0.8rem #fd0352,0 0 2.8rem #fd0352,inset 0 0 1.3rem #fd0352; ',
-        button:
-          '0 0 .2rem #fff,0 0 .2rem #fff,0 0 2rem #fd0352,0 0 0.8rem #fd0352,0 0 2.8rem #fd0352,inset 0 0 1.3rem #fd0352; ',
-        'button-hover':
-          '0 0 .2rem #fff,0 0 .2rem #fff,0 0 2rem #fff,0 0 0.8rem #fff,0 0 2.8rem #fff,inset 0 0 1.3rem #fff; ',
-      },
+      boxShadow: {},
       // hover:[transform:rotateY(360deg)]
       keyframes: {
         border: {
@@ -124,14 +125,12 @@ const config = {
       background: {
         progress:
           'radial-gradient(closest-side, white 79%, transparent 80% 100%),    conic-gradient(hotpink 75%, pink 0);   ',
+        darkBlueGradient: 'linear-gradient(#091428, #0A1428)',
+        goldGradient: 'linear-gradient(#785A28, #C89B3C)',
+        blueGradient: 'linear-gradient(#005A82, #0AC8B9)',
       },
       backgroundPosition: {},
-      textShadow: {
-        'sign-in':
-          '0px 0px 10px #fd0352, 0px 0px 20px #fd0352, 0px 0px 40px #fd0352, 0px 0px 80px #fd0352',
-        input:
-          '0px 0px 10px #000, 0px 0px 20px #000, 0px 0px 40px #000, 0px 0px 80px #000',
-      },
+      textShadow: {},
     },
   },
   plugins: [

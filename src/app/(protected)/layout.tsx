@@ -12,7 +12,7 @@ export default async function LeagueLayout({
       <div className="flex min-h-screen bg-cover bg-top bg-no-repeat pl-4">
         <div className="mx-auto flex w-full max-w-[1440px] justify-between">
           <div className="flex w-full flex-col">
-            <Header />
+            {/* <Header /> */}
             {children}
           </div>
         </div>

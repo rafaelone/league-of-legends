@@ -11,7 +11,7 @@ import { z } from 'zod'
 
 import LeeSin from '@/assets/icons/lee_sin.webp'
 import LeonaIcon from '@/assets/icons/leona_toast.webp'
-import RiotLogo from '@/assets/logo.png'
+import { Input } from '@/components/input'
 import { Modal } from '@/components/modal'
 
 import { signUpAction } from './actions'
@@ -54,6 +54,7 @@ export function SignUpForm() {
   async function submit(data: SignUp) {
     const response: void | { message: string; status: number } =
       await signUpAction(data)
+
     setIsOpen(true)
     setTimeout(() => {
       router.replace('/sign-in')
@@ -70,7 +71,6 @@ export function SignUpForm() {
         ),
       })
     }
-    setIsOpen(true)
   }
 
   const onToggle = useCallback(() => {
@@ -86,95 +86,102 @@ export function SignUpForm() {
       >
         <div className="flex h-full flex-col items-center justify-center px-4">
           <Image src={LeeSin} alt="Lee-sin" />
-          <strong className="text-center font-poppins font-bold text-white-100">
+          <strong className="font-league text-center font-bold text-white-100">
             Account created successfully, you will be redirected in 5 seconds,
             good luck summoner.
           </strong>
         </div>
       </Modal>
-      <Image
-        src={RiotLogo}
-        width={150}
-        height={150}
-        priority
-        alt="Riot Games"
-        className="mx-auto my-[80px] block"
-      />
+
       <motion.form
         onSubmit={handleSubmit(submit)}
-        className="w-full max-w-[360px] space-y-6 backdrop-blur-sm"
-        initial={{
-          opacity: 0,
-          scale: 0.75,
-        }}
-        animate={{
-          opacity: 1,
-          scale: 1,
-          transition: {
-            ease: 'easeOut',
-            duration: 0.15,
-          },
-        }}
+        className="w-full max-w-[360px] space-y-6 bg-white-100/90 p-4 backdrop-blur-sm"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 3 }}
         exit={{
           opacity: 0,
-          scale: 0.75,
           transition: {
             ease: 'easeIn',
             duration: 0.15,
           },
         }}
       >
+        <strong className="font-league mb-8 block text-center text-2xl font-semibold text-blue-700">
+          Sign Up
+        </strong>
         <div className="space-y-4">
           <div>
-            <input
+            <Input
               type="text"
-              id="floating_standard"
-              className="peer block w-full appearance-none rounded-md bg-transparent px-4 py-2.5 font-poppins text-md font-semibold text-white-100 shadow-input focus:outline-none focus:ring-0"
-              placeholder="Name"
+              id="name"
+              placeholder=" "
+              htmlFor="name"
+              labelText="Name"
               {...register('name')}
             />
+
             {errors.name?.message && (
-              <span className="font-poppins text-sm font-bold text-white-100">
+              <span className="font-league text-sm font-bold text-red-200">
                 {errors.name.message}
               </span>
             )}
           </div>
           <div>
-            <input
-              type="text"
-              id="floating_standard"
-              className="peer block w-full appearance-none rounded-md bg-transparent px-4 py-2.5 font-poppins text-md font-semibold text-white-100 shadow-input focus:outline-none focus:ring-0"
-              placeholder="E-mail"
+            <Input
+              type="email"
+              id="email"
+              placeholder=" "
+              htmlFor="email"
+              labelText="E-mail"
               {...register('email')}
             />
+            {errors.email?.message && (
+              <span className="font-league text-sm font-bold text-red-200">
+                {errors.email.message}
+              </span>
+            )}
           </div>
           <div>
-            <input
+            <Input
               type="text"
-              id="floating_standard"
-              className="peer block w-full appearance-none rounded-md bg-transparent px-4 py-2.5 font-poppins text-md font-semibold text-white-100 shadow-input focus:outline-none focus:ring-0"
-              placeholder="Username"
+              id="text"
+              placeholder=" "
+              htmlFor="username"
+              labelText="username"
               {...register('username')}
             />
+            {errors.username?.message && (
+              <span className="font-league text-sm font-bold text-red-200">
+                {errors.username.message}
+              </span>
+            )}
           </div>
           <div>
-            <input
+            <Input
               type="password"
-              id="floating_standard"
-              className="peer block w-full appearance-none rounded-md bg-transparent px-4 py-2.5 font-poppins text-md font-semibold text-white-100 shadow-input focus:outline-none focus:ring-0"
-              placeholder="Password"
+              id="password"
+              placeholder=" "
+              htmlFor="password"
+              labelText="Password"
               {...register('password')}
             />
+            {errors.password?.message && (
+              <span className="font-league text-sm font-bold text-red-200">
+                {errors.password.message}
+              </span>
+            )}
           </div>
         </div>
+
         <button
           disabled={!allFieldsFilled}
-          className="flex h-11 w-full items-center justify-center rounded-lg text-white-100 shadow-button transition-colors disabled:shadow-button-hover"
+          className="font-league group mt-[70px] flex h-[44px] w-full items-center justify-center rounded-lg bg-red-200 text-sm font-bold uppercase text-white-100 disabled:bg-white-200"
         >
           {isSubmitting ? (
             <LuLoader2 className="size-4 animate-spin" />
           ) : (
-            'Sign Up'
+            'create account'
           )}
         </button>
       </motion.form>
