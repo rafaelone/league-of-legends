@@ -28,6 +28,7 @@ export async function httpSignUp({
       })
       .json()
   } catch (error: unknown) {
+    console.log(error)
     return await httpErrorHandler(error)
   }
 }

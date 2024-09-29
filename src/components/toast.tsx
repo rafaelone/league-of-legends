@@ -1,29 +1,45 @@
 import Image from 'next/image'
-import type { ReactNode } from 'react'
+import { toast as toastSonner } from 'sonner'
 
 import LeonaToast from '@/assets/icons/leona_toast.webp'
 
 type ToastProps = {
-  type: 'fail' | 'success'
-  children: ReactNode
+  type: 'error' | 'success'
+  message: string
 }
 
-export function Toast({ type, children }: ToastProps) {
+export function toast({ type, message }: ToastProps) {
   let Icon = null
 
   switch (type) {
-    case 'fail':
-      Icon = <Image src={LeonaToast} alt="Leona" className="size-11" />
+    case 'error':
+      Icon = (
+        <Image
+          src={LeonaToast}
+          alt="Leona"
+          className="size-11"
+          data-testid="toast"
+        />
+      )
       break
-    case 'success':
-      Icon = <Image src={LeonaToast} alt="Leona" className="size-11" />
+    default:
+      Icon = (
+        <Image
+          src={LeonaToast}
+          alt="Leona"
+          className="size-11"
+          data-testid="toast"
+        />
+      )
       break
   }
 
-  return (
-    <div>
-      {Icon}
-      {children}
-    </div>
-  )
+  toastSonner[type](message, {
+    position: 'top-right',
+    classNames: {
+      error: 'bg-red-300',
+      title: 'text-white-100',
+    },
+    icon: Icon,
+  })
 }

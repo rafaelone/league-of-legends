@@ -1,3 +1,6 @@
+import { redirect } from 'next/navigation'
+
+import { isAuthenticated } from '@/auth/auth'
 import { Header } from '@/components/header'
 import { Menu } from '@/components/menu'
 
@@ -6,6 +9,10 @@ export default async function LeagueLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
+  if (!isAuthenticated()) {
+    redirect('/sign-in')
+  }
+
   return (
     <>
       <div className="absolute -z-10 min-h-screen w-full bg-home bg-cover bg-top bg-no-repeat px-4 brightness-50" />

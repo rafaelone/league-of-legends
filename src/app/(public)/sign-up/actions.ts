@@ -10,6 +10,7 @@ export async function signUpAction(
   data: signUpActionParams,
 ): Promise<signUpActionResponse> {
   'use server'
+
   const response = await httpSignUp(data)
   return response
 }

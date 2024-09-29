@@ -13,6 +13,7 @@ import LeeSin from '@/assets/icons/lee_sin.webp'
 import LeonaIcon from '@/assets/icons/leona_toast.webp'
 import { Input } from '@/components/input'
 import { Modal } from '@/components/modal'
+import { validateFormFieldsFilled } from '@/utils/validateFormFieldsFilled'
 
 import { signUpAction } from './actions'
 
@@ -47,9 +48,7 @@ export function SignUpForm() {
 
   const fields = watch(['name', 'email', 'username', 'password'])
 
-  const allFieldsFilled = fields.every(
-    (value) => value !== undefined && value !== '',
-  )
+  const fieldsFilled = validateFormFieldsFilled(fields)
 
   async function submit(data: SignUp) {
     const response: void | { message: string; status: number } =
@@ -86,7 +85,7 @@ export function SignUpForm() {
       >
         <div className="flex h-full flex-col items-center justify-center px-4">
           <Image src={LeeSin} alt="Lee-sin" />
-          <strong className="font-league text-center font-bold text-white-100">
+          <strong className="text-center font-league font-bold text-white-100">
             Account created successfully, you will be redirected in 5 seconds,
             good luck summoner.
           </strong>
@@ -107,7 +106,7 @@ export function SignUpForm() {
           },
         }}
       >
-        <strong className="font-league mb-8 block text-center text-2xl font-semibold text-blue-700">
+        <strong className="mb-8 block text-center font-league text-2xl font-semibold text-blue-700">
           Sign Up
         </strong>
         <div className="space-y-4">
@@ -118,6 +117,7 @@ export function SignUpForm() {
               placeholder=" "
               htmlFor="name"
               labelText="Name"
+              dataTestId="name"
               {...register('name')}
             />
 
@@ -134,6 +134,7 @@ export function SignUpForm() {
               placeholder=" "
               htmlFor="email"
               labelText="E-mail"
+              dataTestId="email"
               {...register('email')}
             />
             {errors.email?.message && (
@@ -149,6 +150,7 @@ export function SignUpForm() {
               placeholder=" "
               htmlFor="username"
               labelText="username"
+              dataTestId="username"
               {...register('username')}
             />
             {errors.username?.message && (
@@ -163,6 +165,7 @@ export function SignUpForm() {
               id="password"
               placeholder=" "
               htmlFor="password"
+              dataTestId="password"
               labelText="Password"
               {...register('password')}
             />
@@ -175,8 +178,8 @@ export function SignUpForm() {
         </div>
 
         <button
-          disabled={!allFieldsFilled}
-          className="font-league group mt-[70px] flex h-[44px] w-full items-center justify-center rounded-lg bg-red-200 text-sm font-bold uppercase text-white-100 disabled:bg-white-200"
+          disabled={!fieldsFilled}
+          className="group mt-[70px] flex h-[44px] w-full items-center justify-center rounded-lg bg-red-200 font-league text-sm font-bold uppercase text-white-100 disabled:bg-white-200"
         >
           {isSubmitting ? (
             <LuLoader2 className="size-4 animate-spin" />
