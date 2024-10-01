@@ -19,6 +19,7 @@ export async function auth() {
 
     return { user }
   } catch (err) {
-    redirect('/api/auth/sign-out')
+    console.log(err)
   }
+  redirect('/api/sign-out')
 }

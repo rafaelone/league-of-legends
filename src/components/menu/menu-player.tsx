@@ -1,17 +1,20 @@
 import Image from 'next/image'
 
-import SummonerIcon from '@/assets/icons/summoner-icon.webp'
+import SummonerIcon from '@/assets/images/aside-icons/summoner-icon.webp'
+import { auth } from '@/auth/auth'
 
 import { MenuPlayerLevel } from './menu-player-level'
 import { MenuStatus } from './menu-status'
 
-export function MenuPlayer() {
+export async function MenuPlayer() {
+  const { user } = await auth()
+
   return (
-    <div className="flex h-[100px] w-full items-center gap-2 border-b border-b-gray-500 px-3">
+    <div className="flex h-[90px] w-full items-center gap-2 border-b border-b-gray-500 px-3 pb-1">
       <button type="button" className="relative h-20 w-20 hover:brightness-125">
         <svg className="absolute inset-0" viewBox="0 0 36 36">
           <circle
-            className="text-yellow-500"
+            className="text-gold-200"
             stroke="currentColor"
             strokeWidth="1"
             fill="transparent"
@@ -43,8 +46,7 @@ export function MenuPlayer() {
             strokeWidth="2"
             fill="transparent"
             strokeDasharray="100"
-            // stroke-dashoffset="20"  -> barra de progresso
-            strokeDashoffset="20"
+            strokeDashoffset={user.percentage}
             r="14"
             cx="18"
             cy="18"
@@ -53,12 +55,10 @@ export function MenuPlayer() {
 
         <svg className="absolute inset-0" viewBox="0 0 36 36">
           <circle
-            className="text-yellow-500"
+            className="text-gold-500"
             stroke="currentColor"
             strokeWidth="2"
-            // stroke-width="2"  <!-- Largura da borda interna -->
             fill="transparent"
-            // r="12"  <!-- Raio menor para a borda interna -->
             r="12"
             cx="18"
             cy="18"
@@ -77,8 +77,10 @@ export function MenuPlayer() {
         </div>
       </button>
 
-      <div className="flex flex-col items-center justify-center">
-        <strong className="font-league text-md text-white-100">OhKiDó</strong>
+      <div className="flex flex-col items-start justify-center">
+        <strong className="font-league text-md text-white-100">
+          {user.nickname ?? 'unknown'}
+        </strong>
         <MenuStatus />
       </div>
     </div>

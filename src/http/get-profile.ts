@@ -14,6 +14,5 @@ type GetProfile = {
 
 export async function getProfile(): Promise<GetProfile> {
   const result = await api.get('profile').json<GetProfile>()
-
   return result
 }

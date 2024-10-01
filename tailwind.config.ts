@@ -49,7 +49,6 @@ const config = {
         gold: {
           100: '#F0E6D2',
           200: '#C8AA6E',
-          300: '#C8AA6E',
           400: '#C89B3C',
           500: '#785A28',
           600: '#463714',
@@ -70,7 +69,9 @@ const config = {
       },
       backgroundImage: {
         'sign-in': "url('/background-sign-in.webp')",
-        home: "url('/background-home.jpeg')",
+        home: "url('/background-home.jpg')",
+        navLink:
+          'linear-gradient(0deg, rgba(235, 235, 244, 0.1348914566), hsla(0, 0%, 100%, 0) 70%)',
       },
       fontFamily: {
         poppins: 'var(--font-poppins)',
@@ -128,6 +129,8 @@ const config = {
         darkBlueGradient: 'linear-gradient(#091428, #0A1428)',
         goldGradient: 'linear-gradient(#785A28, #C89B3C)',
         blueGradient: 'linear-gradient(#005A82, #0AC8B9)',
+        navLink:
+          'linear-gradient(0deg, rgba(235, 235, 244, 0.1348914566), hsla(0, 0%, 100%, 0) 70%)',
       },
       backgroundPosition: {},
       textShadow: {},

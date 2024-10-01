@@ -5,7 +5,7 @@ import { FaCircle } from 'react-icons/fa'
 import { tv } from 'tailwind-variants'
 
 const StatusVariants = tv({
-  base: 'flex items-center gap-2 font-league text-sm font-medium transition-colors',
+  base: 'flex items-center gap-2 font-league text-sm font-medium transition-colors capitalize',
   variants: {
     variant: {
       online: 'text-green-300',
@@ -18,7 +18,7 @@ const StatusVariants = tv({
 })
 
 const CircleVariants = tv({
-  base: 'rounded-full border-2 transition-colors',
+  base: 'rounded-full border-2 transition-colors ',
   variants: {
     variant: {
       online: 'border-green-100 text-green-200',
@@ -43,7 +43,7 @@ export function MenuStatus() {
       className={StatusVariants({ variant: status })}
     >
       <FaCircle size={16} className={CircleVariants({ variant: status })} />
-      Online
+      {status}
     </button>
   )
 }
