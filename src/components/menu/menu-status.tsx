@@ -39,6 +39,7 @@ export function MenuStatus() {
 
   return (
     <button
+      type="button"
       onClick={handleChangeStatus}
       className={StatusVariants({ variant: status })}
     >

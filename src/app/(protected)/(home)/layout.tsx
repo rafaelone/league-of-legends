@@ -16,9 +16,9 @@ export default async function LeagueLayout({
 
   return (
     <>
-      <div className="absolute -z-10 min-h-screen w-full bg-home bg-cover bg-top bg-no-repeat px-4 brightness-50" />
-      <div className="flex min-h-screen bg-cover bg-top bg-no-repeat">
-        <div className="flex w-full justify-between">
+      <div className="flex h-full bg-home bg-cover bg-center bg-no-repeat">
+        <div className="absolute inset-0 bg-black opacity-50"></div>
+        <div className="z-10 flex w-full justify-between">
           <div className="flex w-full flex-col">
             <Header />
             <div className="mx-auto my-4 flex h-full w-full max-w-[1440px]">

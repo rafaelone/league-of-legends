@@ -9,7 +9,7 @@ type NavigationHomeItemProps = ComponentProps<typeof Link>
 export function NavigationHomeItem(props: NavigationHomeItemProps) {
   const pathname = usePathname()
 
-  const isCurrent = pathname.includes(props.href.toString())
+  const isCurrent = pathname === props.href.toString()
 
   return (
     <Link

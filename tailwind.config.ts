@@ -134,6 +134,12 @@ const config = {
       },
       backgroundPosition: {},
       textShadow: {},
+      gridTemplateColumns: {
+        cblol: '2fr 1fr 1fr',
+      },
+      gridTemplateRows: {
+        cblol: 'repeat(3, auto)',
+      },
     },
   },
   plugins: [
