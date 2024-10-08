@@ -59,7 +59,7 @@ export default function PatchNotes() {
         game mechanics, check out our 2024 Step 3 Developer Blog
       </blockquote>
       <Image
-        src="https://cmsassets.rgpub.io/sanity/images/dsfx7636/news/c09f9a5148de70497aab7b0b71c4c84f513dea58-1920x1080.jpg"
+        src="https://cmsassets.rgpub.io/sanity/images/dsfx7636/news/1578798b9f2d896004a598317fd13dad2c25a347-1920x1080.jpg"
         alt="patch"
         className="mt-4 h-full w-full"
         width={846}

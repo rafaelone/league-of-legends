@@ -66,6 +66,9 @@ const config = {
         dark: {
           100: '#000000',
         },
+        green: {
+          100: '#00A03F',
+        },
       },
       backgroundImage: {
         'sign-in': "url('/background-sign-in.webp')",
