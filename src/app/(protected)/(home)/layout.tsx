@@ -21,7 +21,7 @@ export default async function LeagueLayout({
         <div className="z-10 flex w-full justify-between">
           <div className="flex w-full flex-col">
             <Header />
-            <div className="mx-auto my-4 flex h-full w-full max-w-[1440px]">
+            <div className="no-scrollbar mx-auto my-4 flex h-[calc(100vh-122px)] w-full max-w-[1440px] overflow-auto">
               <div className="mx-11 w-full">
                 <nav>
                   <ul className="flex items-center gap-3">
@@ -36,7 +36,7 @@ export default async function LeagueLayout({
                       </NavigationHomeItem>
                     </li>
                     <li>
-                      <NavigationHomeItem href="/patch" prefetch>
+                      <NavigationHomeItem href="/patch-notes" prefetch>
                         patch notes
                       </NavigationHomeItem>
                     </li>

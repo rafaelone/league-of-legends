@@ -8,7 +8,7 @@ import IgnisCup from '@/assets/images/cblol/ignis-cup.webp'
 import OutsideTheRiftProdelta from '@/assets/images/cblol/outside-the-rift-prodelta.webp'
 import OutsideTheRiftWiser from '@/assets/images/cblol/outside-the-rift-wiser.webp'
 
-export default async function Cblol() {
+export default function Cblol() {
   return (
     <div className="mt-5 grid grid-cols-3 grid-rows-2 gap-4">
       <Link
