@@ -11,12 +11,12 @@ export function MenuFriendList() {
       <MenuFriend name="Friend 6" status="inQueue" />
       <MenuFriend name="Friend 7" status="inMobile" />
       <MenuFriend name="Friend 8" status="online" />
-      <MenuFriend name="Friend 8" status="online" />
-      <MenuFriend name="Friend 8" status="online" />
-      <MenuFriend name="Friend 8" status="online" />
-      <MenuFriend name="Friend 8" status="online" />
-      <MenuFriend name="Friend 8" status="online" />
-      <MenuFriend name="Friend 8" status="online" />
+      <MenuFriend name="Friend 9" status="online" />
+      <MenuFriend name="Friend 10" status="online" />
+      <MenuFriend name="Friend 11" status="online" />
+      <MenuFriend name="Friend 12" status="online" />
+      <MenuFriend name="Friend 13" status="online" />
+      <MenuFriend name="Friend 14" status="online" />
     </ul>
   )
 }

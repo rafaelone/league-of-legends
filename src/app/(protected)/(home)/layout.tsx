@@ -3,7 +3,7 @@ import { redirect } from 'next/navigation'
 import { isAuthenticated } from '@/auth/auth'
 import { Header } from '@/components/header'
 import { Menu } from '@/components/menu'
-import { NavigationHomeItem } from '@/components/navigation-home'
+import { NavigationItem } from '@/components/navigation-item'
 
 export default async function LeagueLayout({
   children,
@@ -26,19 +26,19 @@ export default async function LeagueLayout({
                 <nav>
                   <ul className="flex items-center gap-3">
                     <li>
-                      <NavigationHomeItem href="/" prefetch>
+                      <NavigationItem href="/" prefetch>
                         Geral
-                      </NavigationHomeItem>
+                      </NavigationItem>
                     </li>
                     <li>
-                      <NavigationHomeItem href="/cblol" prefetch>
+                      <NavigationItem href="/cblol" prefetch>
                         cblol
-                      </NavigationHomeItem>
+                      </NavigationItem>
                     </li>
                     <li>
-                      <NavigationHomeItem href="/patch-notes" prefetch>
+                      <NavigationItem href="/patch-notes" prefetch>
                         patch notes
-                      </NavigationHomeItem>
+                      </NavigationItem>
                     </li>
                   </ul>
                 </nav>

@@ -6,6 +6,10 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'cmsassets.rgpub.io',
       },
+      {
+        protocol: 'https',
+        hostname: 'ddragon.leagueoflegends.com',
+      },
     ],
   },
 }

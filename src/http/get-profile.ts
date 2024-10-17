@@ -1,7 +1,7 @@
-import { api } from './api-client'
+import { api, type ErrorType } from './api-client'
 
-type GetProfile = {
-  user: {
+type GetProfile = ErrorType & {
+  user?: {
     id: string
     nickname: string | null
     summonerIcon: string | null
@@ -13,6 +13,16 @@ type GetProfile = {
 }
 
 export async function getProfile(): Promise<GetProfile> {
-  const result = await api.get('profile').json<GetProfile>()
-  return result
+  const response = await api<GetProfile>('profile', {
+    method: 'GET',
+  })
+
+  if (response.data?.user) {
+    return response.data
+  }
+
+  return {
+    message: response.data?.message ?? '',
+    status: response.data?.status ?? 400,
+  }
 }

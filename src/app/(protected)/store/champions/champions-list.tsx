@@ -1,0 +1,62 @@
+import { ChampionCard } from '@/components/champion-card'
+
+export function ChampionsList() {
+  return (
+    <ul className="flex w-full flex-wrap justify-center gap-3">
+      <ChampionCard
+        imageUrl="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Kaisa_0.jpg"
+        name="kaisa"
+        priceInEssence={9999}
+        priceInRp={9999}
+      />
+      <ChampionCard
+        imageUrl="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Kaisa_0.jpg"
+        name="kaisa"
+        priceInEssence={9999}
+        priceInRp={9999}
+      />
+      <ChampionCard
+        imageUrl="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Kaisa_0.jpg"
+        name="kaisa"
+        priceInEssence={9999}
+        priceInRp={9999}
+      />
+      <ChampionCard
+        imageUrl="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Kaisa_0.jpg"
+        name="kaisa"
+        priceInEssence={9999}
+        priceInRp={9999}
+      />
+      <ChampionCard
+        imageUrl="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Kaisa_0.jpg"
+        name="kaisa"
+        priceInEssence={9999}
+        priceInRp={9999}
+      />
+      <ChampionCard
+        imageUrl="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Kaisa_0.jpg"
+        name="kaisa"
+        priceInEssence={9999}
+        priceInRp={9999}
+      />
+      <ChampionCard
+        imageUrl="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Kaisa_0.jpg"
+        name="kaisa"
+        priceInEssence={9999}
+        priceInRp={9999}
+      />
+      <ChampionCard
+        imageUrl="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Kaisa_0.jpg"
+        name="kaisa"
+        priceInEssence={9999}
+        priceInRp={9999}
+      />
+      <ChampionCard
+        imageUrl="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Kaisa_0.jpg"
+        name="kaisa"
+        priceInEssence={9999}
+        priceInRp={9999}
+      />
+    </ul>
+  )
+}

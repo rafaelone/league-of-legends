@@ -14,6 +14,8 @@ export async function auth() {
     redirect('/sign-in')
   }
 
+  // console.log(token)
+
   try {
     const { user } = await getProfile()
 

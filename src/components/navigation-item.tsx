@@ -4,9 +4,9 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import type { ComponentProps } from 'react'
 
-type NavigationHomeItemProps = ComponentProps<typeof Link>
+type NavigationItemProps = ComponentProps<typeof Link>
 
-export function NavigationHomeItem(props: NavigationHomeItemProps) {
+export function NavigationItem(props: NavigationItemProps) {
   const pathname = usePathname()
 
   const isCurrent = pathname === props.href.toString()

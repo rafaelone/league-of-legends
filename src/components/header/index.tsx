@@ -26,7 +26,7 @@ export async function Header() {
                   prefetch
                   className="flex h-full items-center font-league text-md font-bold uppercase tracking-[2px] text-gold-200 group-hover:text-gold-100 group-hover:brightness-105 data-[current=true]:bg-navLink data-[current=true]:text-gold-100"
                 >
-                  Início
+                  Start
                 </NavLink>
               </li>
               <li className="group flex h-full cursor-pointer items-center transition-all">
@@ -58,14 +58,17 @@ export async function Header() {
                 quality={80}
               />
             </button>
-            <button className="h-full cursor-pointer font-league text-md font-bold uppercase transition-all hover:brightness-150">
+            <NavLink
+              href="/store"
+              className="flex h-full cursor-pointer items-center font-league text-md font-bold uppercase transition-all hover:brightness-150 data-[current=true]:bg-navLink data-[current=true]:text-gold-100"
+            >
               <Image
                 src={StoreIcon}
                 alt="Store"
                 className="h-5 w-6"
                 quality={80}
               />
-            </button>
+            </NavLink>
             <div className="h-[40px] w-[2px] -translate-y-1 bg-gradient-to-b from-dark-100 from-[10%] via-yellow-500 to-dark-100" />
             <div className="flex h-full flex-col justify-center gap-1">
               <button

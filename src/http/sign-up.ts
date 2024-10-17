@@ -17,18 +17,16 @@ export async function httpSignUp({
   password,
 }: HttpSignUpParams): Promise<HttpSignUpResponse> {
   try {
-    await api
-      .post('create-account', {
-        json: {
-          name,
-          email,
-          username,
-          password,
-        },
-      })
-      .json()
+    await api('/create-account', {
+      method: 'POST',
+      body: JSON.stringify({
+        name,
+        email,
+        username,
+        password,
+      }),
+    })
   } catch (error: unknown) {
-    console.log(error)
     return await httpErrorHandler(error)
   }
 }

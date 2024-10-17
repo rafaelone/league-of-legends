@@ -2,11 +2,12 @@
 
 import { cookies } from 'next/headers'
 
+import type { ErrorType } from '@/http/api-client'
 import { authenticate, type AuthenticateParams } from '@/http/authenticate'
 
 type signInActionParams = AuthenticateParams
 
-type signInActionResponse = void | { message: string; status: number }
+type signInActionResponse = void | ErrorType
 
 export async function signInAction(
   data: signInActionParams,
@@ -15,14 +16,11 @@ export async function signInAction(
 
   const response = await authenticate(data)
 
-  console.log(response)
-
   if (response.token) {
     cookies().set('token', response.token, {
       maxAge: 60 * 60 * 24 * 7, // 7 dias
       path: '/',
     })
-    return
   }
 
   return {
