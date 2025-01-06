@@ -1,6 +1,4 @@
 
-**League of Legends Launcher**:  
-
 <p align="center">
 <img src="./.github/preview.png">
 </p>
